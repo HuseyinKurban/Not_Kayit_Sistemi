@@ -48,6 +48,8 @@
             this.txtsinav2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblsınıfortalaması = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.lblkalansayisi = new System.Windows.Forms.Label();
             this.lblgecensayisi = new System.Windows.Forms.Label();
             this.lblortalama = new System.Windows.Forms.Label();
@@ -56,8 +58,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbNotKayıtDataSet = new Not_Kayit_Sistemi.DbNotKayıtDataSet();
             this.tBLDERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbNotKayıtDataSet = new Not_Kayit_Sistemi.DbNotKayıtDataSet();
             this.tBLDERSTableAdapter = new Not_Kayit_Sistemi.DbNotKayıtDataSetTableAdapters.TBLDERSTableAdapter();
             this.oGRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oGRNUMARADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,15 +70,13 @@
             this.oGRS3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oRTALAMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dURUMDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.lblsınıfortalaması = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayıtDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLDERSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayıtDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -256,6 +256,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bilgi";
             // 
+            // lblsınıfortalaması
+            // 
+            this.lblsınıfortalaması.AutoSize = true;
+            this.lblsınıfortalaması.Location = new System.Drawing.Point(297, 124);
+            this.lblsınıfortalaması.Name = "lblsınıfortalaması";
+            this.lblsınıfortalaması.Size = new System.Drawing.Size(31, 31);
+            this.lblsınıfortalaması.TabIndex = 10;
+            this.lblsınıfortalaması.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(294, 31);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "SINIF ORTALAMASI  :";
+            // 
             // lblkalansayisi
             // 
             this.lblkalansayisi.AutoSize = true;
@@ -356,15 +374,15 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // dbNotKayıtDataSet
-            // 
-            this.dbNotKayıtDataSet.DataSetName = "DbNotKayıtDataSet";
-            this.dbNotKayıtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tBLDERSBindingSource
             // 
             this.tBLDERSBindingSource.DataMember = "TBLDERS";
             this.tBLDERSBindingSource.DataSource = this.dbNotKayıtDataSet;
+            // 
+            // dbNotKayıtDataSet
+            // 
+            this.dbNotKayıtDataSet.DataSetName = "DbNotKayıtDataSet";
+            this.dbNotKayıtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tBLDERSTableAdapter
             // 
@@ -376,6 +394,7 @@
             this.oGRIDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.oGRIDDataGridViewTextBoxColumn.Name = "oGRIDDataGridViewTextBoxColumn";
             this.oGRIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.oGRIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // oGRNUMARADataGridViewTextBoxColumn
             // 
@@ -425,24 +444,6 @@
             this.dURUMDataGridViewCheckBoxColumn.HeaderText = "DURUM";
             this.dURUMDataGridViewCheckBoxColumn.Name = "dURUMDataGridViewCheckBoxColumn";
             // 
-            // lblsınıfortalaması
-            // 
-            this.lblsınıfortalaması.AutoSize = true;
-            this.lblsınıfortalaması.Location = new System.Drawing.Point(306, 124);
-            this.lblsınıfortalaması.Name = "lblsınıfortalaması";
-            this.lblsınıfortalaması.Size = new System.Drawing.Size(31, 31);
-            this.lblsınıfortalaması.TabIndex = 10;
-            this.lblsınıfortalaması.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 124);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(294, 31);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "SINIF ORTALAMASI  :";
-            // 
             // FrmOgretmenDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -470,8 +471,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayıtDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLDERSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayıtDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,6 +507,8 @@
         private DbNotKayıtDataSet dbNotKayıtDataSet;
         private System.Windows.Forms.BindingSource tBLDERSBindingSource;
         private DbNotKayıtDataSetTableAdapters.TBLDERSTableAdapter tBLDERSTableAdapter;
+        private System.Windows.Forms.Label lblsınıfortalaması;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn oGRIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oGRNUMARADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oGRADDataGridViewTextBoxColumn;
@@ -515,7 +518,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn oGRS3DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oRTALAMADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dURUMDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Label lblsınıfortalaması;
-        private System.Windows.Forms.Label label11;
     }
 }
